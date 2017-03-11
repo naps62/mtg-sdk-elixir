@@ -85,3 +85,12 @@ See [Advanced Usage] for more info
 [Magic The Gathering API]: http://magicthegathering.io/
 [Official API docs]: https://docs.magicthegathering.io/
 [Advanced Usage]: https://docs.magicthegathering.io/#advanced-usage
+
+# License
+
+```
+Copyright © 2017 Miguel Palhas
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the MIT License. See the LICENSE file for more details.
+```
