@@ -1,38 +1,42 @@
 defmodule MTG.Mixfile do
   use Mix.Project
 
+  @description "Magic the Gathering API Wrapper"
+  @github_url "https://github.com/naps62/mtg-sdk-elixir"
+
+
   def project do
-    [app: :mtg,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :mtg,
+      version: "0.1.0",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps(),
+      description: @description,
+      source_url: @github_url,
+      package: package(),
+    ]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
-    # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger, :httpoison],
      mod: {MTG, []}]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
   defp deps do
     [
       {:httpoison, "~> 0.10.0"},
       {:poison, "~> 3.0"},
       {:credo, "~> 0.5", only: [:dev, :test]}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Miguel Palhas"],
+      licenses: ["MIT"],
+      links: %{"Github" => @github_url}
     ]
   end
 end
