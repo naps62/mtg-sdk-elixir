@@ -28,7 +28,8 @@ defmodule MTG.Mixfile do
     [
       {:httpoison, "~> 0.10.0"},
       {:poison, "~> 3.0"},
-      {:credo, "~> 0.5", only: [:dev, :test]}
+      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 
