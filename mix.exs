@@ -15,8 +15,8 @@ defmodule MTG.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger],
-     mod: {MTG.Application, []}]
+    [extra_applications: [:logger, :httpoison],
+     mod: {MTG, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -30,6 +30,8 @@ defmodule MTG.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:httpoison, "~> 0.10.0"},
+      {:poison, "~> 3.0"},
       {:credo, "~> 0.5", only: [:dev, :test]}
     ]
   end
