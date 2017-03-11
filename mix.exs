@@ -29,6 +29,8 @@ defmodule MTG.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:credo, "~> 0.5", only: [:dev, :test]}
+    ]
   end
 end
