@@ -7,7 +7,7 @@ defmodule MTG.Mixfile do
 
   def project do
     [
-      app: :mtg,
+      app: :mtg_api,
       version: "0.1.0",
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
@@ -35,6 +35,7 @@ defmodule MTG.Mixfile do
 
   defp package do
     [
+      package: :mtg_api,
       maintainers: ["Miguel Palhas"],
       licenses: ["MIT"],
       links: %{"Github" => @github_url}

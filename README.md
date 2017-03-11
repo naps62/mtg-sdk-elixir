@@ -8,7 +8,7 @@ First, add MTG to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
-  [{:mtg, "~> 0.1.0"}]
+  [{:mtg_api, "~> 0.1.0"}]
 end
 ```
 
